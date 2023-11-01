@@ -14,9 +14,11 @@ public class HttpHandler {
         HttpHandler.list = list;
     }
 
+    // 인터페이스로 분리하기
     public String handle(String method, String requestUrl, StringBuilder requestBody) {
         switch (method) {
             case GET_METHOD:
+                // 필터로 분리하기 (커맨드 패턴)
                 if (requestUrl.equals("/")) {
                     return executeGetMethod();
                 }
