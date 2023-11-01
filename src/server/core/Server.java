@@ -50,6 +50,7 @@ public class Server {
             Map<String, String> headers = new HashMap<>();
             String httpHeader;
 
+            // 단일 책임 원칙에 위배!
             while ((httpHeader = reader.readLine()) != null && !httpHeader.isEmpty()) {
                 String[] headerContents = httpHeader.split(": ");
                 if (headerContents.length == 2) {
