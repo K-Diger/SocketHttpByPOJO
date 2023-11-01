@@ -79,5 +79,6 @@ public class Server {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        // 단일 책임 원칙에 위배!
     }
 }
